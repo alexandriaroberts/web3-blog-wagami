@@ -15,7 +15,7 @@ type DataProps = {
 
 export default function BlogPosts({ data }: { data: DataProps }) {
   return (
-    <>
+    <div>
       <Head>
         <title>Blog posts</title>
         <meta name='description' content='All posts for decentralised blog' />
@@ -84,13 +84,13 @@ export default function BlogPosts({ data }: { data: DataProps }) {
           </div>
         </div>
       </main>
-    </>
+    </div>
   );
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
-    const res = await fetch('https://dummyjson.com/posts');
+    const res = await fetch('http://dummyjson.com/posts');
     const data = await res.json();
 
     return { props: { data } };
