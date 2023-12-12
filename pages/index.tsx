@@ -90,8 +90,8 @@ export default function BlogPosts({ data }: { data: DataProps }) {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
-    const res = await fetch('http://dummyjson.com/posts');
-    const data = await res.json();
+    const res = await fetch('https://dummyjson.com/posts');
+    const data: DataProps = await res.json();
 
     return { props: { data } };
   } catch (error) {
