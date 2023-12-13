@@ -1,6 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
 import '../app/globals.css';
 
 type Post = {
@@ -25,9 +25,9 @@ export default function Blog({ data }: { data: DataProps }) {
 
       <main className='m-12'>
         <div className='bg-white py-24 sm:py-32'>
-          <div className='mx-auto max-w-7xl px-6 lg:px-8'>
+          <div>
             <div className='mx-auto max-w-2xl lg:mx-0'>
-              <h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
+              <h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
                 From the blog
               </h2>
               <p className='mt-2 text-lg leading-8 text-gray-600'>
@@ -61,9 +61,11 @@ export default function Blog({ data }: { data: DataProps }) {
                   </p>
                 </div>
                 <div className='relative mt-8 flex items-center gap-x-4'>
-                  <img
+                  <Image
                     src='https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
-                    alt='jj'
+                    alt='profile picture'
+                    width={50}
+                    height={50}
                     className='h-10 w-10 rounded-full bg-gray-50'
                   />
                   <div className='text-sm leading-6'>
