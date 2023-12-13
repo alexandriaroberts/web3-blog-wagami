@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
-import '../../app/globals.css';
+import '../app/globals.css';
 
 type Post = {
   id: number;
@@ -35,7 +35,7 @@ export default function Blog({ data }: { data: DataProps }) {
               </p>
             </div>
           </div>
-          {/* <div className='mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3'>
+          <div className='mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3'>
             {data.posts.map((post) => (
               <article
                 className='flex max-w-xl flex-col items-start justify-between'
@@ -75,7 +75,7 @@ export default function Blog({ data }: { data: DataProps }) {
                 </div>
               </article>
             ))}
-          </div> */}
+          </div>
         </div>
       </main>
     </div>
