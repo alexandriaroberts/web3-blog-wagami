@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
-import '../app/globals.css';
+import '../../app/globals.css';
 
 type Post = {
   id: number;
@@ -13,7 +13,7 @@ type DataProps = {
   posts: Post[];
 };
 
-export default function BlogPosts({ data }: { data: DataProps }) {
+export default function Blog({ data }: { data: DataProps }) {
   return (
     <div>
       <Head>
